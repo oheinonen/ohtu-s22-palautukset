@@ -26,6 +26,7 @@ class Ostoskori:
         for i in range(len(self._ostokset)):
             if lisattava == self._ostokset[i].tuote:
                 on_korissa = True
+                self._ostokset[i].muuta_lukumaaraa(1)
         if not on_korissa:
             self._ostokset.append(Ostos(lisattava))
 
