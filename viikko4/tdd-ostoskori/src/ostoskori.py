@@ -22,7 +22,12 @@ class Ostoskori:
         # lisää tuotteen
         self._hinta += lisattava.hinta()
         self._tavaroita_korissa += 1
-        self._ostokset.append(Ostos(lisattava))
+        on_korissa = False
+        for i in range(len(self._ostokset)):
+            if lisattava == self._ostokset[i].tuote:
+                on_korissa = True
+        if not on_korissa:
+            self._ostokset.append(Ostos(lisattava))
 
     def poista_tuote(self, poistettava: Tuote):
         # poistaa tuotteen
