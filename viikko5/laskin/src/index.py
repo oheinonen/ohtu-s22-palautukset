@@ -11,7 +11,7 @@ def main():
 
     kayttoliittyma = Kayttoliittyma(sovellus, window)
     kayttoliittyma.kaynnista()
-
+    # muutos tänne
     window.mainloop()
 
 if __name__ == "__main__":
